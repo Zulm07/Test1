@@ -1,0 +1,35 @@
+
+# State Machine Template 
+
+# States
+states = {
+  "Idle" : False, "Walking": False
+}
+# Define your states here!
+
+
+# State Checker
+def checkAndOperateStates():
+  # Define your states here. 2 states have been named but not defined for you!
+  def stateIdle():
+    pass
+  def stateWalking():
+    pass
+  # Sets
+  for i in states:
+    if states["Idle"] == True:
+      print("Subject is Idle")
+    if states["Walking"] == True:
+      print("Subject is Walking")
+
+# State Setter
+def stateTo(state: str)-> str:
+  state = state.capitalize()
+  for i in states:
+    states[i] = False
+  states[state] = True
+
+'''
+Notes: Run the function above function to change from a state to another e.g if not touching the ground: stateTo("Flying")
+This Function will turn off any other state i.e your subject can't be in 2 states at the same time.
+'''
